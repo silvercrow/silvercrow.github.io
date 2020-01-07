@@ -5,5 +5,8 @@
   <script src="https://www.puck-js.com/puck.js"></script>
   <button onclick="Puck.write('LED1.set();\n');">On!</button>
   <button onclick="Puck.write('LED1.reset();\n');">Off!</button>
+  <script>
+  Puck.eval("BTN.read()",function(x) { console.log(x); })
+  </script>
  </body>
 </html>
