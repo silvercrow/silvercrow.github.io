@@ -112,21 +112,28 @@ label.switch > input[type="checkbox"]:checked ~ span:after {
      Puck.write('analogWrite(13,0);\n');
     } 
   }
+   function handleBackLightClick(cb){
+   if(cb.checked){
+     Puck.write('LED1.set();\n');
+    }else{
+     Puck.write('LED1.reset();\n');
+    } 
+   }
   </script>  
   
-       <div class="container">
-        <h1>Pixl.js Pin13</h1>
-            <label class="switch">
-              <input type="checkbox" onclick='handleLedClick(this);'>
-              <span></span>
-            </label>
-        </div>
+  <div class="container">
+   <h2>Pixl.js</h2>
+   <h2>Pin13</h2>
+    <label class="switch">
+      <input type="checkbox" onclick='handleLedClick(this);'>
+      <span></span>
+    </label>
+    <h2>BackgroundLight</h2>
+     <label class="switch">
+       <input type="checkbox" onclick='handleBackLightClick(this);'>
+       <span></span>
+     </label>
+   </div>
   
-  <button onclick="Puck.write('LED1.set();\n');">On!</button>
-  <button onclick="Puck.write('LED1.reset();\n');">Off!</button>
-  <button onclick="Puck.write('analogWrite(13,1);\n');">Led ON</button>
-  <button onclick="Puck.write('analogWrite(13,0);\n');">Led Off</button>
-
-
  </body>
 </html>
