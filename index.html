@@ -114,11 +114,13 @@ label.switch > input[type="checkbox"]:checked ~ span:after {
   }
   </script>  
   
-
-  <label class="switch">
-    <input type="checkbox" onclick='handleLedClick(this);'>
-    <span></span>
-  </label>
+       <div class="container">
+        <h1>Pixl.js Pin13</h1>
+            <label class="switch">
+              <input type="checkbox" onclick='handleLedClick(this);'>
+              <span></span>
+            </label>
+        </div>
   
   <button onclick="Puck.write('LED1.set();\n');">On!</button>
   <button onclick="Puck.write('LED1.reset();\n');">Off!</button>
